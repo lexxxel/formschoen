@@ -1,0 +1,14 @@
+file_format: "1"
+id: formschoen
+name: Formschoen
+type: shield
+url: https://github.com/lexxxel/formschoen
+requires: [nice_nano_v2]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - underglow
+siblings:
+  - formschoen_left
+  - formschoen_right
