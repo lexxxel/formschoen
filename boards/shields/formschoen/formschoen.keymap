@@ -14,6 +14,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+                        display-name = "Base";
 // -----------------------------------------------------------------------------------------
 // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
 // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
@@ -28,6 +29,7 @@
                         >;
                 };
                 lower_layer {
+                        display-name = "Brackets";
 // -----------------------------------------------------------------------------------------
 // |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
 // | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |
@@ -43,6 +45,7 @@
                 };
 
                 raise_layer {
+                        display-name = "Numbers";
 // -----------------------------------------------------------------------------------------
 // |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
 // |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |
@@ -57,16 +60,22 @@
                 };
                 
                 gaming_layer {
-                  bindings = < &trans >;
+                        display-name = "Gaming";
+                        bindings = < &trans >;
                         
                 };
-                mouse_layer {
-                  bindings = < &trans >;
+                bluetooth_layer {
+                        status = "reserved";
                         
                 };
-                special_char_layer {
-                  bindings = < &trans >;
-                        
+                gaming2_layer {
+                        status = "reserved";
+                };
+                extra_layer {
+                        status = "reserved";
+                };
+                extra2_layer {
+                        status = "reserved";
                 };
         };
 };
