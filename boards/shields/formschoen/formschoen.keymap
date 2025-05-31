@@ -17,21 +17,21 @@
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         flavor = "tap-preferred";
-                        tapping-term-ms = <200>;
-                        require-prior-idle-ms = <100>;
+                        tapping-term-ms = <180>;
+                        //require-prior-idle-ms = <80>;
                         bindings = <&kp>, <&kp>;
                         display-name = "Mod-Tap";
-                        quick-tap-ms = <100>;
+                        quick-tap-ms = <150>;
                 };
                 lt: layer_tap {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         flavor = "tap-preferred";
-                        tapping-term-ms = <200>;
-                        require-prior-idle-ms = <100>;
+                        tapping-term-ms = <180>;
+                        //require-prior-idle-ms = <80>;
                         bindings = <&mo>, <&kp>;
                         display-name = "Layer-Tap";
-                        quick-tap-ms = <100>;
+                        quick-tap-ms = <150>;
                 };
         };
     
@@ -95,11 +95,11 @@
                 gaming2_layer {
                         display-name = "Gaming 2";
                         bindings = <
-   &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  
-   &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  
-   &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &to 0  
-           &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans    
-                                           &trans       &trans
+   &kp GRAVE  &trans  &trans  &kp P   &kp T   &trans       &trans  &trans  &trans  &trans  &trans  &trans  
+   &kp N1     &kp N2  &kp N3  &kp N4  &kp N5  &trans       &trans  &trans  &trans  &trans  &trans  &trans  
+   &trans     &kp P   &kp I   &kp M   &kp B   &trans       &trans  &trans  &trans  &trans  &trans  &to 0  
+              &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans    
+                                              &trans       &trans
                         >;
                 };
                 
