@@ -34,6 +34,15 @@
                         quick-tap-ms = <150>;
                 };
         };
+        
+        combos {
+                compatible = "zmk,combos";
+                combo_number_layer {
+                        timeout-ms = <50>;
+                        key-positions = <20 22>;
+                        bindings = <&tog 7>;
+                };
+        };
     
         keymap {
                 compatible = "zmk,keymap";
@@ -52,7 +61,7 @@
                         display-name = "Brackets";
                         bindings = <
    &trans  &trans     &kp RA(N7)    &kp RA(N0)  &trans         &trans       &trans  &trans  &trans  &trans  &trans  &trans  
-   &trans  &kp NUBS  &kp LS(N8)    &kp LS(N9)  &kp LS(NUBS)  &trans       &trans  &trans  &trans  &trans  &trans  &trans  
+   &trans  &kp NUBS   &kp LS(N8)    &kp LS(N9)  &kp LS(NUBS)   &trans       &trans  &trans  &trans  &trans  &trans  &trans  
    &trans  &kp HOME   &kp RA(N8)    &kp RA(N9)  &kp END        &trans       &trans  &trans  &trans  &trans  &trans  &trans  
            &kp GRAVE  &kp RA(NUBS)  &trans      &trans         &trans       &trans  &trans  &trans  &trans  &trans    
                                                                &trans       &trans
@@ -62,11 +71,11 @@
                 raise_layer {
                         display-name = "Numbers";
                         bindings = <
-   &trans  &trans  &trans  &trans    &trans   &trans       &trans  &kp RBKT  &kp N7  &kp N8  &kp N9  &kp LBKT  
-   &trans  &trans  &trans  &trans    &trans   &trans       &trans  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp APOS  
-   &trans  &trans  &trans  &trans    &trans   &trans       &trans  &kp N0  &kp N1  &kp N2  &kp N3  &kp NUHS  
-           &trans  &trans  &kp RALT  &trans   &trans       &trans  &kp EQUAL  &kp CAPS  &kp DEL  &kp RA(RBKT)    
-                                              &trans       &trans
+   &trans  &trans  &trans  &trans    &trans     &trans       &trans  &kp RBKT   &kp N7     &kp N8   &kp N9        &kp LBKT  
+   &trans  &trans  &trans  &trans    &trans     &trans       &trans  &kp MINUS  &kp N4     &kp N5   &kp N6        &kp APOS  
+   &trans  &trans  &trans  &trans    &trans     &trans       &trans  &kp N0     &kp N1     &kp N2   &kp N3        &kp NUHS  
+           &trans  &trans  &kp RALT  &kp CAPS   &trans       &trans  &kp EQUAL  &kp SPACE  &kp DEL  &kp RA(RBKT)    
+                                                &trans       &trans
                         >;
                 };
                 
@@ -111,6 +120,17 @@
    &bt BT_DISC 3  &bt BT_DISC 2   &bt BT_DISC 1  &bt BT_DISC 0  &bt BT_DISC 4  &trans       &trans  &trans  &trans  &trans  &trans      &trans  
                   &trans          &trans         &to 4          &trans         &trans       &trans  &trans  &trans  &trans  &bt BT_CLR    
                                                                                &trans       &trans
+                        >;
+                };
+                
+                one_hand_numbers {
+                        display-name = "1Hand-Numbers";
+                        bindings = <
+   &trans  &trans  &trans  &trans    &trans   &trans       &kp UP      &kp RBKT   &kp N7     &kp N8     &kp N9     &kp LS(RBKT)  
+   &trans  &trans  &trans  &trans    &trans   &trans       &kp RIGHT   &kp FSLH   &kp N4     &kp N5     &kp N6     &kp LS(N7)  
+   &trans  &trans  &trans  &trans    &trans   &trans       &kp DOWN    &kp N0     &kp N1     &kp N2     &kp N3     &kp LS(N0)  
+           &trans  &trans  &trans    &trans   &trans       &kp LEFT    &kp BSPC   &kp SPACE  &kp COMMA  &kp DOT    
+                                              &trans       &kp RET
                         >;
                 };
         };
